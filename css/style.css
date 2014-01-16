@@ -1,0 +1,1151 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #FFF; }
+a:visited { color: #CCC; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+
+body {
+  background-image: url(../img/u6.jpg);
+  background-position: top left;
+  background-repeat: repeat-y;
+  text-align:left;
+}
+
+header{
+    background-color: #fff;
+    min-height: 65px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+}
+
+.logoContainer {
+    margin-top: 15px;
+}
+
+.abblogoContainer{
+    float: right;
+}
+
+#abblogo{
+    margin-top: -10px;
+}
+
+.alpha60 {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(102, 102, 102);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(102, 102, 102, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.summary {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.summary h4{
+    text-transform: uppercase;
+}
+
+.tileColumn{
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.tileContainer > div{
+    min-height: 200px;
+    float: left;
+}
+
+.tileContainer > div:hover{
+    cursor: pointer;
+}
+
+.networkTile{
+   background-color: rgb(11, 116, 173); 
+   background-color: rgba(11, 116, 173, 0.9); 
+}
+
+.networkTile:hover{
+   background-color: rgb(11, 116, 173); 
+} 
+
+.feedbackTile{
+   background-color: rgb(96, 96, 96); 
+   background-color: rgba(96, 96, 96, 0.9); 
+}
+
+.feedbackTile:hover{
+   background-color: rgb(96, 96, 96); 
+}
+
+.statsTile{
+   background-color: rgb(205, 220, 40); 
+   background-color: rgba(205, 220, 40, 0.9); 
+} 
+
+.statsTile:hover{
+   background-color: rgb(205, 220, 40); 
+} 
+
+.photosTile{
+   background-color: rgb(116, 192, 67); 
+   background-color: rgba(116, 192, 67, 0.9); 
+}
+
+.photosTile:hover{
+   background-color: rgb(116, 192, 67); 
+}
+
+.icon{
+    background-size: 100%; /*TO DO: add fallback for IE*/
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+}
+.twitterIco{
+    background-image: url(../img/tweeterface.png);
+    height: 40px;
+    width: 40px;
+} 
+
+.tubeIco{
+   background-image: url(../img/u32.png); 
+   margin-left: -15px;
+}
+
+.feedbackIco{
+   background-image: url(../img/u62.png); 
+}
+
+.statsIco{
+   background-image: url(../img/u51.png); 
+}
+
+.photosIco{
+   background-image: url(../img/u75.png); 
+}
+
+.network{
+       background-color: rgb(11, 116, 173); 
+}
+
+.stats{
+       background-color: rgb(205, 220, 40); 
+}
+
+.feedback{
+       background-color: rgb(96, 96, 96); 
+}
+
+.photos{
+       background-color: rgb(116, 192, 67); 
+}
+
+.close{
+    position: relative;
+    margin-top: -5px;
+}
+
+#closeBack{
+    display: none;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.closeFront{
+    background-image: url(../img/u327.png); 
+    display: none;
+    margin: 0 auto;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 27px;
+    height: 27px;
+}
+
+.closeC1{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -300px;
+    display: block !important;
+}
+
+.closeC2{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -600px;
+    display: block !important;
+}
+
+.closeC3{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -400px;
+    display: block !important;
+}
+
+.closeC4{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -500px;
+    display: block !important;
+}
+
+.centered{
+    margin: 0 auto;
+}
+
+.review{
+    background-color: #fff;
+    color: #666;
+    text-shadow: none;
+    float: left;
+    margin: 10px 10px 10px 0;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+    -webkit-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+    -moz-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+}
+
+.review p {
+    padding: 10px;
+    width: 93%;
+    float: right;
+}
+
+.review p:last-child {
+    margin-bottom: 0;
+}
+
+.review a {
+    color: #007DC0;
+    text-align: right;
+}
+
+a.reviewLink {
+    float: right;
+    font-size: 16px;
+}
+
+.review span.reviewer{
+    font-weight: 700;
+}
+
+.review span.reviewerContact{
+    font-size: 13px;
+}
+
+.tw{
+    background-image: url(../img/tw.png);
+}
+
+.fb{
+    background-image: url(../img/294_button_facebook.png);
+}
+
+.bl{
+    background-image: url(../img/blog.png);
+}
+
+.smallIco{
+    background-size: 100% auto;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    right: 0;   
+}
+
+.reviewIco{
+    display: inline-block;
+    width: 7%;
+    position: relative;
+}
+
+.padded, .filters{
+    padding: 20px;
+}
+
+.filters h4{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lightBlue{
+    background-color: #81CFFA;
+}
+
+.pic{
+    display: inline-block;
+}
+
+.f-srsly{
+    background-image: url(../img/feedback/5.png);
+}
+
+.f-weak{
+    background-image: url(../img/feedback/3.png);
+}
+
+.f-ok{
+    background-image: url(../img/feedback/4.png);
+}
+
+.f-awesome{
+    background-image: url(../img/feedback/1a.png);
+}
+
+.f-notBad{
+    background-image: url(../img/feedback/2.png);
+}
+
+#env{
+    background-color: #606060;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 0;
+    visibility: hidden;  
+}
+
+.env-animating{
+    height: 100% !important;
+    visibility: visible !important;  
+}
+
+.f-env{
+    background: url(../img/feedback/Koperta_grey.png) center no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    width: 100%;
+    min-height: 230px;
+}
+
+.fb-form{
+    position: relative;
+}
+
+.f-confirmation{
+    font-size: 14px;
+    padding-top: 40px;
+    display: none;
+}
+
+.f-confirmation p:first-child{
+    color: #71AE4A;
+}
+
+.f-confirmation .reload{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.f-container{
+   display: inline-block;
+   margin: 5px;
+   min-height: 150px;
+   min-width: 110px;
+   float: left;
+}
+
+.f-ico{
+    background-color: #868686;
+    margin: 5px;
+    min-height: 95px;
+    min-width: 115px;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    cursor: pointer;
+}
+
+.f-ico > span{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 85px;
+}
+
+.f-radio{
+    text-align: center;
+}
+
+textarea{
+    border: 1px solid #fff;
+    background-color: #868686;
+    color: #fff;
+    margin: 20px 0;
+    resize: none;
+    width: 100%;
+    height: 210px;
+    box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+    -webkit-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+    -moz-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.3490196);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+textarea:focus {
+    background: #868686;  
+}
+
+label.radioLabel{
+    display: inline;
+    color: #fff;
+    padding-left: 10px;
+}
+ 
+input[type="radio"]{
+    display: inline;
+	position: absolute;
+	left: 0;
+	margin: 0;
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+    cursor: pointer;
+}
+
+.arrowContainer{
+    cursor: pointer;
+    position: fixed;
+    top: 50%; 
+    z-index: 500;      
+}
+
+.arrowContainer.left{
+    left: 5px;    
+}
+.arrowContainer.right{
+    right: 5px;    
+}
+
+.arrowContainer.right span:last-child{
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.arrow{    
+    margin: 0 auto;
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 27px;
+    height: 27px;
+}
+
+.arrowBack{
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+
+.bg1A{
+    background-image: url("../img/u100.png");
+}
+
+.bg1B{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -700px;
+}
+
+.bg2A{
+    background-image: url("../img/u188.png");
+}
+
+.bg2B{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 0;
+}
+
+.bg3A{
+    background-image: url("../img/u217.png");
+}
+
+.bg3B{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -100px;
+}
+
+.bg4A{
+    background-image: url("../img/u267.png");
+}
+
+.bg4B{
+    background: url(../img/bg-sprite.png) no-repeat top left;
+    background-position: 0 -200px;
+}
+
+.seeYa{
+    background-image: url("../img/u175.png");
+    position: relative;
+    float: right;
+    margin-top: 18px;
+    margin-right: -15px;
+    width: 165px;
+    height: 165px;
+}
+
+.seeYa span{
+    font-size: small;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    position: absolute;
+    top:  60px;
+    left: 15px;
+}
+
+.clear{
+    clear: both;
+}
+
+.perspective {
+    
+	width: 100%;
+	height: 100%;
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	perspective: 1200px;
+	
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	-webkit-transform-style: preserve-3d;
+	
+}
+
+.section {
+    height: 0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+}
+
+.section-current {
+    height: initial;
+	visibility: visible;
+}
+
+.section-current .row{
+    padding-bottom: 60px; 
+}
+
+#main
+{
+	width: 100%;
+    position: absolute;
+    top: 65px;
+    bottom: 30px;
+    	
+	-webkit-backface-visibility: visible;
+	-moz-backface-visibility: visible;
+	backface-visibility: visible;
+	
+	-webkit-transform-style: preserve-3d;
+}
+
+#section_main 
+{
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	
+	-webkit-backface-visibility: hidden;
+	
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-transform: translateZ(0px);
+}
+
+footer{
+    background-color: #333333;
+    min-height: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer span{
+    display: inline-block;
+    padding: 4px 10px;
+    float: left;
+}
+
+.foot-ico{
+    background: url(../img/icon_white.png) center no-repeat;
+    background-size: 100% auto;
+    width: 26px;
+    height: 26px;
+    margin: 0 10px;
+    padding-left: 10px
+}
+
+.edition{
+    display: block;
+}
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports that meet the condition */
+    body{
+       background-size: 100%; 
+       position: initial;
+    }
+    header{
+        min-height: 78px;
+        position: initial;
+    }
+    #abblogo{
+        float: right;
+    }
+    .tileContainer{
+        position: absolute;
+        top: 140px;
+    } 
+    .review{
+        width: 45%;
+    }
+    .padded h4, .filters h4{
+        display: inline;
+    }
+    .padded .icon{
+        margin-bottom: -20px;
+    }
+    .font28{
+        font-size: 28px;
+    }
+    .font36{
+        font-size: 36px;
+    }
+    .font48 {
+        font-size: 48px;
+    }
+    .font55{
+        font-size: 55px;
+    }
+    .font100{
+        font-size: 100px;
+    }
+    .review{
+        margin-left: 10px;
+    }
+    .review:nth-child(even){
+        float: right;
+    }
+    .close{
+        margin-top: 0;
+    }
+    .seeYa{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    #main{
+        position: absolute;
+        top: 78px;
+    }
+    #section_main, .section-current
+    {
+	    height: 150%;
+    }
+    .padded .feedbackIco, .padded .photosIco{
+       float: left;
+       margin-top: 0; 
+       margin-right: 10px;
+    }
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+/* ==|== animations =======================================================
+ 
+   ========================================================================== */
+
+.rotateFoldTop {
+	-webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+	-webkit-animation: rotateFoldTop .7s both ease;
+	-moz-animation: rotateFoldTop .7s both ease;
+	animation: rotateFoldTop .7s both ease;
+}
+
+@-webkit-keyframes rotateFoldTop {
+	to { opacity: 0; -webkit-transform: translateY(-100%) rotateX(90deg); }
+}
+@-moz-keyframes rotateFoldTop {
+	to { opacity: 0; -moz-transform: translateY(-100%) rotateX(90deg); }
+}
+@keyframes rotateFoldTop {
+	to { opacity: 0; transform: translateY(-100%) rotateX(90deg); }
+}
+
+.rotateUnfoldBottom {
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-animation: rotateUnfoldBottom .7s both ease;
+	-moz-animation: rotateUnfoldBottom .7s both ease;
+	animation: rotateUnfoldBottom .7s both ease;
+}
+
+@-webkit-keyframes rotateUnfoldBottom {
+	from { opacity: 0; -webkit-transform: translateY(100%) rotateX(-90deg); }
+}
+@-moz-keyframes rotateUnfoldBottom {
+	from { opacity: 0; -moz-transform: translateY(100%) rotateX(-90deg); }
+}
+@keyframes rotateUnfoldBottom {
+	from { opacity: 0; transform: translateY(100%) rotateX(-90deg); }
+}
+
+.rotateFoldBottom {
+	-webkit-transform-origin: 50% 0%;	
+	-moz-transform-origin: 50% 0%;	
+	transform-origin: 50% 0%;
+    -webkit-animation: rotateFoldBottom .7s both ease;
+    -moz-animation: rotateFoldBottom .7s both ease;
+	animation: rotateFoldBottom .7s both ease;
+}
+
+@-webkit-keyframes rotateFoldBottom {
+	to { opacity: 0; -webkit-transform: translateY(100%) rotateX(-90deg); }
+}
+@-moz-keyframes rotateFoldBottom {
+	to { opacity: 0; -moz-transform: translateY(100%) rotateX(-90deg); }
+}
+@keyframes rotateFoldBottom {
+	to { opacity: 0; transform: translateY(100%) rotateX(-90deg); }
+}
+
+.rotateUnfoldTop {
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-animation: rotateUnfoldTop .7s both ease;
+	-moz-animation: rotateUnfoldTop .7s both ease;
+	animation: rotateUnfoldTop .7s both ease;
+}
+
+@-webkit-keyframes rotateUnfoldTop {
+	from { opacity: 0; -webkit-transform: translateY(-100%) rotateX(90deg); }
+}
+@-moz-keyframes rotateUnfoldTop {
+	from { opacity: 0; -moz-transform: translateY(-100%) rotateX(90deg); }
+}
+@keyframes rotateUnfoldTop {
+	from { opacity: 0; transform: translateY(-100%) rotateX(90deg); }
+}
+
+.rotateFoldLeft {
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-animation: rotateFoldLeft .7s both ease;
+	-moz-animation: rotateFoldLeft .7s both ease;
+	animation: rotateFoldLeft .7s both ease;
+}
+
+@-webkit-keyframes rotateFoldLeft {
+	to { opacity: 0; -webkit-transform: translateX(-100%) rotateY(-90deg); }
+}
+@-moz-keyframes rotateFoldLeft {
+	to { opacity: 0; -moz-transform: translateX(-100%) rotateY(-90deg); }
+}
+@keyframes rotateFoldLeft {
+	to { opacity: 0; transform: translateX(-100%) rotateY(-90deg); }
+}
+
+.rotateUnfoldRight {
+	-webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+	-webkit-animation: rotateUnfoldRight .7s both ease;
+	-moz-animation: rotateUnfoldRight .7s both ease;
+	animation: rotateUnfoldRight .7s both ease;
+}
+
+
+@-webkit-keyframes rotateUnfoldRight {
+	from { opacity: 0; -webkit-transform: translateX(100%) rotateY(90deg); }
+}
+@-moz-keyframes rotateUnfoldRight {
+	from { opacity: 0; -moz-transform: translateX(100%) rotateY(90deg); }
+}
+@keyframes rotateUnfoldRight {
+	from { opacity: 0; transform: translateX(100%) rotateY(90deg); }
+}
+
+.rotateFoldRight {
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+	-webkit-animation: rotateFoldRight .7s both ease;
+	-moz-animation: rotateFoldRight .7s both ease;
+	animation: rotateFoldRight .7s both ease;
+}
+
+@-webkit-keyframes rotateFoldRight {
+	to { opacity: 0; -webkit-transform: translateX(100%) rotateY(90deg); }
+}
+@-moz-keyframes rotateFoldRight {
+	to { opacity: 0; -moz-transform: translateX(100%) rotateY(90deg); }
+}
+@keyframes rotateFoldRight {
+	to { opacity: 0; transform: translateX(100%) rotateY(90deg); }
+}
+
+.rotateUnfoldLeft {
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-animation: rotateUnfoldLeft .7s both ease;
+	-moz-animation: rotateUnfoldLeft .7s both ease;
+	animation: rotateUnfoldLeft .7s both ease;
+}
+
+@-webkit-keyframes rotateUnfoldLeft {
+	from { opacity: 0; -webkit-transform: translateX(-100%) rotateY(-90deg); }
+}
+@-moz-keyframes rotateUnfoldLeft {
+	from { opacity: 0; -moz-transform: translateX(-100%) rotateY(-90deg); }
+}
+@keyframes rotateUnfoldLeft {
+	from { opacity: 0; transform: translateX(-100%) rotateY(-90deg); }
+}
+
+.moveFromBottomFade {
+	-webkit-animation: moveFromBottomFade .2s ease both;
+	-moz-animation: moveFromBottomFade .2s ease both;
+	animation: moveFromBottomFade .2s ease both;
+}
+
+@-webkit-keyframes moveFromBottomFade {
+	from { opacity: 0.3; -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveFromBottomFade {
+	from { opacity: 0.3; -moz-transform: translateY(100%); }
+}
+@keyframes moveFromBottomFade {
+	from { opacity: 0.3; transform: translateY(100%); }
+}
+
+.moveToRightFade {
+	-webkit-animation: moveToRightFade .5s ease both;
+	-moz-animation: moveToRightFade .5s ease both;
+	animation: moveToRightFade .5s ease both;
+}
+
+@-webkit-keyframes moveToRightFade {
+	to { opacity: 0.3; -webkit-transform: translateX(200%); }
+}
+@-moz-keyframes moveToRightFade {
+	to { opacity: 0.3; -moz-transform: translateX(200%); }
+}
+@keyframes moveToRightFade {
+    to { opacity: 0.3; transform: translateX(200%); }
+}
+
