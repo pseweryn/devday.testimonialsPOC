@@ -1,4 +1,4 @@
 devday.testimonialsPOC
 ======================
 
-frontend code for DevDay Testimonials website
+HTML, CSS and JS for DevDay Testimonials website
