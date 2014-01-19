@@ -859,7 +859,7 @@ footer span{
         top: 140px;
     } 
     .tileContainer > div{
-        padding-right: 10px;
+        padding-right: 0;
     }
     .review{
         width: 45%;
