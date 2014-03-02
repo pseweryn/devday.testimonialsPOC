@@ -917,6 +917,24 @@ footer span{
     }
 }
 
+@media only screen and (max-width: 1300px) and (min-width: 768px){
+    #section_main, .section-current{
+	    height: initial;
+    }
+    .tileColumn{
+        left: 75px;
+    }
+    .tileContainer{
+        top: 80px;
+    }
+    .font55{
+        font-size: 50px;
+    }
+    #main{
+        position: initial;
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 980px) {
     .review{
         max-height: 180px;
