@@ -923,6 +923,18 @@ footer span{
     }
 }
 
+@media only screen and (max-width: 325px){
+    header{
+        min-height: 50px;
+    }
+    .close{
+        margin-bottom: 5px;
+    }
+    #main{
+        top: 50px;   
+    }
+}
+
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
