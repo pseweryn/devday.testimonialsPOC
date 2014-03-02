@@ -413,7 +413,8 @@ header{
 }
 
 .centered{
-    margin: 0 auto;
+    position: relative;
+    left: 0;
 }
 
 .review{
@@ -861,10 +862,16 @@ footer span{
     .tileContainer > div{
         padding-right: 0;
     }
+    .centered{
+        left: 20%;
+    }
     .review{
         width: 45%;
-        max-height: 180px;
         overflow: hidden;
+        margin-left: 10px;
+    }
+    .review:nth-child(even){
+        float: right;
     }
     .padded h4, .filters h4{
         display: inline;
@@ -886,12 +893,6 @@ footer span{
     }
     .font100{
         font-size: 100px;
-    }
-    .review{
-        margin-left: 10px;
-    }
-    .review:nth-child(even){
-        float: right;
     }
     .close{
         margin-top: 0;
@@ -916,7 +917,11 @@ footer span{
     }
 }
 
-
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+    .review{
+        max-height: 180px;
+    }
+}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
