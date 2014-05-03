@@ -3,13 +3,7 @@
 */
 
 $(function () {
-    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-    var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
-    var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
-    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-    var is_mobile = document.body.clientWidth < 768;
 
-    //var offsetnote = is_chrome || is_explorer ? 0 : 78;
     var $main = $('#main');
     var $sections = $main.children('div.section');
     var $close = $('.close');
@@ -29,12 +23,6 @@ $(function () {
     var animEndEventName = animEndEventNames[Modernizr.prefixed('animation')];
     // support css animations
     var support = Modernizr.cssanimations;
-
-    function dirtyTopHack() {
-        if (is_chrome || is_explorer || is_safari) {
-            $('.section').css('top', '0');
-        }
-    }
 
     function setSectionClasses() {
         $sections.each(function () {
@@ -280,7 +268,6 @@ $(function () {
 
     function init() {
 
-        dirtyTopHack();
         setSectionClasses();
 
         closeClick();
